@@ -12,7 +12,9 @@ double relu (double x) {
     return x > 0 ? x : 0;
 }
 
-
+double reludervite (double x) {
+    return x > 0 ? 1 : 0;
+}
 
 double sigmoidDerivative(double x) {
     double s = sigmoid(x);
@@ -57,7 +59,7 @@ int main() {
             for (int j = 0; j < n_int; j++) {
                 z_hidden[i] += w_input_hidden[i][j] * x[j];
             }
-            a_hidden[i] = sigmoid(z_hidden[i]);
+            a_hidden[i] = relu(z_hidden[i]);
         }
 
         double z_output[n_outputs];
@@ -83,7 +85,7 @@ int main() {
             for (int j = 0; j < n_outputs; j++) {
                 sum_errors += delta_output[j] * w_output_hidden[j][i];
             }
-            delta_hidden[i] = sum_errors * sigmoidDerivative(z_hidden[i]);
+            delta_hidden[i] = sum_errors * relu(z_hidden[i]);
         }
 
         // Update weights hidden → output
