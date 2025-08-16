@@ -1,0 +1,55 @@
+{
+  "configurations": [
+    {
+      "browse": {},
+      "cStandard": "c17",
+      "compileCommands": "compilerArgs"
+      :
+    [],
+    "compilerPath"
+    :
+    "configurationProvider"
+    :
+    "",
+    "cppStandard"
+    :
+    "c++20",
+    "customConfigurationVariables"
+    :
+    {},
+    "defines"
+    :
+    [
+    ],
+    "dotConfig"
+    :
+    "",
+    "forcedInclude"
+    :
+    [],
+    "includePath"
+    :
+    [
+      "${workspaceFolder}/**"
+    ],
+    "intelliSenseMode"
+    :
+    "macos-clang-x86",
+    "macFrameworkPath"
+    :
+    [],
+    "mergeConfigurations"
+    :
+    false,
+    "name"
+    :
+    "CLion",
+    "windowsSdkVersion"
+    :
+    ""
+    }
+  ],
+  "version": 4,
+  "enableConfigurationSquiggles": false,
+  "env": {}
+}
