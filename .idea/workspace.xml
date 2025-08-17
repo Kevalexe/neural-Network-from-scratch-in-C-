@@ -18,6 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96d5261f-7a98-4e61-87cb-eb432914a0f5" name="Changes" comment="intial commit for Nureal network in C++">
+      <change afterPath="$PROJECT_DIR$/Dataloader.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dataloader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
@@ -49,6 +51,12 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="31GJPdlPlNCulnWp49SbOnMPsK9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectStatusUIService"><![CDATA[{
+  "uiKindId": "Widget"
+}]]></component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -75,6 +83,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Neural_networks\Dataset" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Neural_networks" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
       <option name="sourceFile" value="main.cpp" />
@@ -94,7 +107,8 @@
       <workItem from="1755232892680" duration="3761000" />
       <workItem from="1755271830111" duration="13000" />
       <workItem from="1755316731467" duration="235000" />
-      <workItem from="1755317798128" duration="1755000" />
+      <workItem from="1755317798128" duration="3557000" />
+      <workItem from="1755404145578" duration="3775000" />
     </task>
     <task id="LOCAL-00001" summary="intial commit for Nureal network in C++">
       <option name="closed" value="true" />
