@@ -1,41 +1,41 @@
-#include <iostream>
+#include "Dataloader.h"
 #include <fstream>
 #include <sstream>
-#include <vector>
-#include <string>
-#include <cstdlib>
-#include <ctime>
-#include "Dataloader.h"
-using namespace std;
+#include <iostream>
 
-// Structure for one sample
-struct Sample {
-    vector<double> features; // 4 inputs
-    vector<double> label;    // one-hot (3 outputs)
-};
+std::vector<Sample> loadIris(const std::string& filename) {
+    std::vector<Sample> dataset;
+    std::ifstream file(filename);
 
-// Load CSV dataset
-vector<Sample> loadIris(string filename) {
-    vector<Sample> data;
-    ifstream file(filename);
-    string line;
-    while (getline(file, line)) {
-        stringstream ss(line);
-        string value;
-        vector<double> features;
-        vector<double> label(3, 0);
-
-        // Read 4 features
-        for (int i = 0; i < 4; i++) {
-            getline(ss, value, ',');
-            features.push_back(stod(value));
-        }
-        // Read label
-        getline(ss, value, ',');
-        int cls = stoi(value);
-        label[cls] = 1.0;
-
-        data.push_back({features, label});
+    if (!file.is_open()) {
+        std::cerr << "Error: Could not open file " << filename << std::endl;
+        return dataset;
     }
-    return data;
+
+    std::string line;
+    while (std::getline(file, line)) {
+        std::stringstream ss(line);
+        std::string item;
+        Sample sample;
+        sample.features.reserve(4);
+
+        // 4 numeric features
+        for (int i = 0; i < 4; i++) {
+            std::getline(ss, item, ',');
+            sample.features.push_back(std::stod(item));
+        }
+
+        // class label → one-hot
+        std::getline(ss, item, ',');
+        if (item == "Iris-setosa")
+            sample.label = {1,0,0};
+        else if (item == "Iris-versicolor")
+            sample.label = {0,1,0};
+        else if (item == "Iris-virginica")
+            sample.label = {0,0,1};
+
+        dataset.push_back(sample);
+    }
+
+    return dataset;
 }
